@@ -2,6 +2,7 @@ django>=6.0,<7.0
 djangorestframework>=3.17
 django-cors-headers>=4.9
 firebase-admin>=7.3
+google-genai>=2.6.0
 # Production
 gunicorn>=21.2
 psycopg2-binary>=2.9
