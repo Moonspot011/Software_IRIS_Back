@@ -142,6 +142,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS Configuration
 CORS_ALLOW_ALL_ORIGINS = True  # Development only
 
+from corsheaders.defaults import default_headers
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "x-firebase-uid",
+    "x-user-role",
+]
+
+# Agregar el frontend de Netlify
+CORS_ALLOWED_ORIGINS = [
+    "https://6a13b20ae9675900086dc2c2--grand-paprenjak-69d309.netlify.app",
+    "https://grand-paprenjak-69d309.netlify.app",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+]
+
 # REST Framework Configuration
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
