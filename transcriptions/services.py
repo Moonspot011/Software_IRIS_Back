@@ -51,7 +51,7 @@ def highlight_concepts_with_gemini(text: str) -> str:
 
     # Realizar petición usando el nuevo SDK de GenAI
     response = client.models.generate_content(
-        model="gemini-1.5-flash",
+        model="gemini-2.5-flash",
         contents=prompt
     )
     
